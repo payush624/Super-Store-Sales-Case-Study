@@ -6,6 +6,7 @@
 ````sql
 select count(distinct State) from Superstore_sales;
 ````
+<img width="141" alt="image" src="https://github.com/payush624/Super-Store-Sales-Case-Study/blob/main/q1">
 
 The Store delivers to 48 differnt states in USA
 
@@ -59,7 +60,7 @@ group by state,Order_Date;
 
 ### 7. Sales by Sub-Category
 ````sql
---  sales by sub category
+
 select distinct(`Sub-Category`),Round(sum(sales),2) as Total_Sales from Sales_insights 
 group by `Sub-Category` 
 order by sum(sales) desc; 
@@ -67,7 +68,7 @@ order by sum(sales) desc;
 **Answer:**
 
 
-### 8. No of Days to ship Product
+### 8. No of Days to ship each Product
 ````sql 
 select Customer_id,Customer_Name,State,City,abs(substr(Ship__Date,1,2)-substr(Order_Date,1,2)) as Order_delivery_days from Superstore_sales
 order by Customer_Name;
