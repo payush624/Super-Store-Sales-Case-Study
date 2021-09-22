@@ -1,6 +1,6 @@
 # :question: Superstore Sales Case Study
 
-## 📌 Solution
+## 📌 Findings
 
 ### 1. In how many cities does store deliver
 ````sql
