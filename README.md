@@ -78,7 +78,7 @@ order by sum(sales) desc;
 select Customer_id,Customer_Name,State,City,abs(substr(Ship__Date,1,2)-substr(Order_Date,1,2)) as Order_delivery_days from Superstore_sales
 order by Customer_Name;
 ````
-<img width="141" alt="image" src="https://github.com/payush624/Super-Store-Sales-Case-Study/blob/main/q8">
+<img width="250" alt="image" src="https://github.com/payush624/Super-Store-Sales-Case-Study/blob/main/q8">
 
 
 ### 9. Creating Stored Procedure for Sales by Year (Stored Procedure is created so that we don't have to write query each time when data gets updated)
@@ -92,7 +92,7 @@ order by Customer_Name;
  Delimiter ;
  call By_year() ;
 ````
-<img width="141" alt="image" src="https://github.com/payush624/Super-Store-Sales-Case-Study/blob/main/q9">
+<img width="250" alt="image" src="https://github.com/payush624/Super-Store-Sales-Case-Study/blob/main/q9">
 
 
 ### 10. Most Preferred method for delivery 
@@ -101,7 +101,7 @@ select distinct(Ship_Mode), count(Ship_Mode) as Count_of_Ship_Mode from Supersto
 group by Ship_Mode
 order by count(Ship_Mode) desc;
 ````
-<img width="141" alt="image" src="https://github.com/payush624/Super-Store-Sales-Case-Study/blob/main/q10">
+<img width="250" alt="image" src="https://github.com/payush624/Super-Store-Sales-Case-Study/blob/main/q10">
 
 Standard Class is most Preferred mode for delivery
 
@@ -141,6 +141,6 @@ End AS Type_of_Customer
 from Superstore_sales group by  Customer_Name order by count(Order_ID) desc;
 
 ````
-<img width="141" alt="image" src="https://github.com/payush624/Super-Store-Sales-Case-Study/blob/main/q13">
+<img width="250" alt="image" src="https://github.com/payush624/Super-Store-Sales-Case-Study/blob/main/q13">
 
-<img width="141" alt="image" src="https://github.com/payush624/Super-Store-Sales-Case-Study/blob/main/q13b">
+<img width="250" alt="image" src="https://github.com/payush624/Super-Store-Sales-Case-Study/blob/main/q13b">
