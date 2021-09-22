@@ -51,6 +51,8 @@ limit 50 ;
 ````
 <img width="250" alt="image" src="https://github.com/payush624/Super-Store-Sales-Case-Study/blob/main/q5">
 
+Most Purchased Product is Staple Envelope
+
 ### Creating Temporary Table to get information about sales, the main motive of temporary table was to remove unwanted columns and make table easy to analyse 
 ````sql 
 create TEMPORARY TABLE Sales_insights (select Customer_ID,Customer_Name,substr(Order_Date,7,10) as Order_Date,Country,State,Region,Category,`Sub-Category`,Sales from Superstore_sales);
@@ -168,6 +170,14 @@ limit 10;
 ````
 <img width="250" alt="image" src="https://github.com/payush624/Super-Store-Sales-Case-Study/blob/main/q15">
 
-## Recomendations
+## Insights and Recomendations
 
+- Store gets most of its sales from West region and have to improve in south which gets least no of sales
+- California has Highest Product purchase and there are many states having less than 25 sales. Store can improve their marketing in these States so they can grow and get sales from these States in Future.
+- Consumer and Corporate Segment make up more than 70% of customerbase.
+- Phones bring more no of sales overall,Store should target selling Phones in Performing region to get more no of sales.
+- Standard class is most preferred delivery method. Providing Same Day delivery in under performing region can boost their sales in upcomming years.
+- East and West Region together gets more than 60% of sales.
+- Better Marketing Strategy,Great deals on Products and Providing faster delivery services in the States of north and south region can get more no of sales in Future years.
 
+#### Thank You :)
