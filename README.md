@@ -28,7 +28,8 @@ There are 3 main Category and multiple sub category
 
 ### 4. Most Purchased Category
 ````sql
-select distinct(`Category`),count(`Category`) as Total_count from Superstore_sales group by `Category` order by Total_count desc;
+select distinct(`Category`),count(`Category`) as Total_count from Superstore_sales group by `Category` 
+order by Total_count desc;
 ````
 **Answer:**
 Most Purchased Category is Office Supplies and least Purchased Category is Technology
