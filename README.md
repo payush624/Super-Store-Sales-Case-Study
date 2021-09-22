@@ -16,6 +16,7 @@ select region,count(region) as No_of_Delivery from Superstore_sales
 group by region
 order by count(region) desc;
 ````
+<img width="141" alt="image" src="https://github.com/payush624/Super-Store-Sales-Case-Study/blob/main/q2">
 
 West region deliverd more products ie 3038 and south region delivered less ie 1557
 
@@ -23,7 +24,8 @@ West region deliverd more products ie 3038 and south region delivered less ie 15
 ````sql
 select distinct(Category),`Sub-Category` from Superstore_sales group by Category,`Sub-Category`;
 ````
-**Answer:**
+<img width="141" alt="image" src="https://github.com/payush624/Super-Store-Sales-Case-Study/blob/main/q3">
+
 There are 3 main Category and multiple sub category
 
 ### 4. Most Purchased Category
@@ -31,7 +33,8 @@ There are 3 main Category and multiple sub category
 select distinct(`Category`),count(`Category`) as Total_count from Superstore_sales group by `Category` 
 order by Total_count desc;
 ````
-**Answer:**
+<img width="141" alt="image" src="https://github.com/payush624/Super-Store-Sales-Case-Study/blob/main/q4">
+
 Most Purchased Category is Office Supplies and least Purchased Category is Technology
 
 ### 5. Most Purchased Product
@@ -41,7 +44,7 @@ group by Product_Name
 Order by count(Product_Name) desc
 limit 50 ;
 ````
-**Answer:**
+<img width="141" alt="image" src="https://github.com/payush624/Super-Store-Sales-Case-Study/blob/main/q5">
 
 ### Creating Temporary Table to get information about sales, the main motive of temporary table was to remove unwanted columns and make table easy to analyse 
 ````sql 
@@ -55,7 +58,8 @@ select state,Order_Date,Round(sum(Sales),2) as Sales from Sales_insights
 group by state,Order_Date;
 
 ````
-**Answer:**
+<img width="141" alt="image" src="https://github.com/payush624/Super-Store-Sales-Case-Study/blob/main/q6">
+
 
 
 ### 7. Sales by Sub-Category
@@ -65,7 +69,8 @@ select distinct(`Sub-Category`),Round(sum(sales),2) as Total_Sales from Sales_in
 group by `Sub-Category` 
 order by sum(sales) desc; 
 ````
-**Answer:**
+<img width="141" alt="image" src="https://github.com/payush624/Super-Store-Sales-Case-Study/blob/main/q7">
+
 
 
 ### 8. No of Days to ship each Product
@@ -73,7 +78,8 @@ order by sum(sales) desc;
 select Customer_id,Customer_Name,State,City,abs(substr(Ship__Date,1,2)-substr(Order_Date,1,2)) as Order_delivery_days from Superstore_sales
 order by Customer_Name;
 ````
-**Answer:**
+<img width="141" alt="image" src="https://github.com/payush624/Super-Store-Sales-Case-Study/blob/main/q8">
+
 
 ### 9. Creating Stored Procedure for Sales by Year (Stored Procedure is created so that we don't have to write query each time when data gets updated)
 ````sql 
@@ -86,7 +92,8 @@ order by Customer_Name;
  Delimiter ;
  call By_year() ;
 ````
-**Answer:**
+<img width="141" alt="image" src="https://github.com/payush624/Super-Store-Sales-Case-Study/blob/main/q9">
+
 
 ### 10. Most Preferred method for delivery 
 ````sql 
@@ -94,7 +101,8 @@ select distinct(Ship_Mode), count(Ship_Mode) as Count_of_Ship_Mode from Supersto
 group by Ship_Mode
 order by count(Ship_Mode) desc;
 ````
-**Answer:**
+<img width="141" alt="image" src="https://github.com/payush624/Super-Store-Sales-Case-Study/blob/main/q10">
+
 Standard Class is most Preferred mode for delivery
 
 create TEMPORARY TABLE Profit(
@@ -110,7 +118,8 @@ select Distinct(Region),sum(Sales_Made) as Total_Sales_over_Years from Profit
 group by Region
 order by sum(Sales_Made) Desc;
 ````
-**Answer:**
+<img width="141" alt="image" src="https://github.com/payush624/Super-Store-Sales-Case-Study/blob/main/q11">
+
 
 ### 12. Lowest to Highest sales by Region and Year
 ````sql 
@@ -118,7 +127,8 @@ select Region,substr(Order_Date,7,10) as Year,Round(sum(Sales)) as Sales_Made fr
 group by Region,substr(Order_Date,7,10)
 order by Round(sum(Sales));
 ````
-**Answer:**
+<img width="141" alt="image" src="https://github.com/payush624/Super-Store-Sales-Case-Study/blob/main/q12">
+
 
 ### 13. Categorizing Customer's based on their Total Purchase
 ````sql  	
@@ -131,5 +141,6 @@ End AS Type_of_Customer
 from Superstore_sales group by  Customer_Name order by count(Order_ID) desc;
 
 ````
-**Answer:**
+<img width="141" alt="image" src="https://github.com/payush624/Super-Store-Sales-Case-Study/blob/main/q13">
 
+<img width="141" alt="image" src="https://github.com/payush624/Super-Store-Sales-Case-Study/blob/main/q13b">
