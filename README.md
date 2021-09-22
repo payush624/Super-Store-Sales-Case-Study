@@ -44,7 +44,7 @@ group by Product_Name
 Order by count(Product_Name) desc
 limit 50 ;
 ````
-<img width="141" alt="image" src="https://github.com/payush624/Super-Store-Sales-Case-Study/blob/main/q5">
+<img width="180" alt="image" src="https://github.com/payush624/Super-Store-Sales-Case-Study/blob/main/q5">
 
 ### Creating Temporary Table to get information about sales, the main motive of temporary table was to remove unwanted columns and make table easy to analyse 
 ````sql 
