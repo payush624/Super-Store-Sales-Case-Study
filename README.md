@@ -121,8 +121,7 @@ order by Round(sum(Sales));
 **Answer:**
 
 ### 13. Categorizing Customer's based on their Total Purchase
-````sql 
--- categorizing customer basrd on their purchase history how active customer is 	
+````sql  	
 select Customer_Name, count(Order_ID) as Total_Order,
 case 
 when count(Order_ID) >= 20 then 'Potential Customer'
