@@ -1,5 +1,10 @@
 # :question: Superstore Sales Case Study
 
+## About Business
+Super Store is a small retail business located in the United States and provide service to 48 different States. They sell Furniture, Office Supplies and Technology products and their customers are the mass Consumer, Corporate and Home Offices. The data set contains Product details,Order Summary, Region, Product sales information and many more other information related to store.
+
+Main task is to find in which area or region business lack and how business can grow in Future.
+
 ## 📌 Findings
 
 ### 1. In how many cities does store deliver
@@ -144,3 +149,25 @@ from Superstore_sales group by  Customer_Name order by count(Order_ID) desc;
 <img width="250" alt="image" src="https://github.com/payush624/Super-Store-Sales-Case-Study/blob/main/q13">
 
 <img width="250" alt="image" src="https://github.com/payush624/Super-Store-Sales-Case-Study/blob/main/q13b">
+
+### 14 States with most no of Product Purchase
+````sql
+select State,count(State) as Total_Sales from Superstore_sales
+group by State
+order by count(State) desc 
+limit 10;
+````
+<img width="250" alt="image" src="https://github.com/payush624/Super-Store-Sales-Case-Study/blob/main/q14">
+
+### 15 States with Least no of Product Purchase
+````sql
+select State,count(State) as Total_Sales from Superstore_sales
+group by State 
+order by count(State) 
+limit 10;
+````
+<img width="250" alt="image" src="https://github.com/payush624/Super-Store-Sales-Case-Study/blob/main/q15">
+
+## Recomendations
+
+
