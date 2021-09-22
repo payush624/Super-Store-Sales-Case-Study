@@ -4,7 +4,7 @@
 
 ### 1. In how many cities does store deliver
 ````sql
-      select count(distinct State) from Superstore_sales;
+select count(distinct State) from Superstore_sales;
 ````
 **Answer:**
 ss
