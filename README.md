@@ -6,8 +6,7 @@
 ````sql
 select count(distinct State) from Superstore_sales;
 ````
-**Answer:**
-ss
+
 The Store delivers to 48 differnt states in USA
 
 ### 2. No of Delivery in Each Region
@@ -16,7 +15,7 @@ select region,count(region) as No_of_Delivery from Superstore_sales
 group by region
 order by count(region) desc;
 ````
-**Answer:**
+
 West region deliverd more products ie 3038 and south region delivered less ie 1557
 
 ### 3. Categories and Sub Categories in store
@@ -133,7 +132,3 @@ from Superstore_sales group by  Customer_Name order by count(Order_ID) desc;
 ````
 **Answer:**
 
-### 14. 
-````sql 
-````
-**Answer:**
